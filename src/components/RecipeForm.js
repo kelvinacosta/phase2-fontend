@@ -15,8 +15,8 @@ function RecipeForm() {
       instructions,
       image
     };
-    console.log(title)
-    fetch("https://backend-phase-2-project-2ll9.onrender.com/recipes/new", {
+    //console.log(title)
+    fetch("https://backend-phase-2-project-2ll9.onrender.com/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

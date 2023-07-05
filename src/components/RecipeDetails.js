@@ -3,20 +3,24 @@ import { useParams } from 'react-router-dom';
 
 function RecipeDetails() {
   const { id } = useParams();
-  const [recipes, setRecipe] = useState(null);
+  const [recipes, setRecipe] = useState({});
 
   useEffect(() => {
     fetch(`https://backend-phase-2-project-2ll9.onrender.com/recipes/${id}`)
       .then(response => response.json())
-      .then(data => setRecipe(data))
+      .then(data => {
+        //console.log(data)
+        setRecipe(data)
+      })
       .catch(error => console.log(error));
   }, [id]);
 
-  if (!recipes) {
+  if (Object.keys(recipes).length === 0) {
     return <p>Loading Details</p>;
   }
 
-  const { title, image, instructions, ingredients } = recipes;
+  const { title,ingredients ,instructions , image} = recipes;
+  //console.log(ingredients)
 
   const mapIngredients = ingredients && ingredients.map((ingredient, index) => (
     <li key={index}>{ingredient}</li>
@@ -34,3 +38,4 @@ function RecipeDetails() {
 }
 
 export default RecipeDetails;
+
