@@ -15,6 +15,7 @@ function App() {
         <Route path="/recipes/:id" component={RecipeDetails} />
         <Route path="/recipes/new" component={RecipeForm} />
       </Switch>
+      
     </Router>
   );
 }
