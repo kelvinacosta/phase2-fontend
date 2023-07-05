@@ -4,6 +4,7 @@ function RecipeForm() {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
+  const [image,setImage] = [""]
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,6 +13,7 @@ function RecipeForm() {
       title,
       ingredients,
       instructions,
+      image
     };
     
 
@@ -28,6 +30,7 @@ function RecipeForm() {
         setTitle("");
         setIngredients("");
         setInstructions("");
+        setImage("");
       })
       .catch((error) => {
         console.log(error);
@@ -52,6 +55,14 @@ function RecipeForm() {
             type="text"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
+          />
+        </label>
+        <label>
+          Image URL:
+          <input
+            type="text"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
           />
         </label>
         <label>
