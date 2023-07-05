@@ -4,7 +4,7 @@ function RecipeForm() {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
-  const [image,setImage] = [""]
+  const [image, setImage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,8 +15,7 @@ function RecipeForm() {
       instructions,
       image
     };
-    
-
+    console.log(title)
     fetch("https://backend-phase-2-project-2ll9.onrender.com/recipes/new", {
       method: "POST",
       headers: {
@@ -79,5 +78,6 @@ function RecipeForm() {
 }
 
 export default RecipeForm;
+
 
 
