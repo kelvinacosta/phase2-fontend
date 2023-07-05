@@ -1,38 +1,92 @@
-.App {
+/* App.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* NavBar.css */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Home.css */
+.home {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* RecipeList.css */
+.recipe-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.recipe-list li {
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.recipe-list a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+/* RecipeDetails.css */
+.recipe-details {
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recipe-details img {
+  max-width: 100%;
+  height: auto;
 }
+
+.recipe-details ul {
+  list-style-type: disc;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.recipe-details h2 {
+  margin-bottom: 10px;
+}
+
+.recipe-details h3 {
+  margin-top: 20px;
+}
+
+/* RecipeForm.css */
+.recipe-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.recipe-form input,
+.recipe-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.recipe-form button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.recipe-form button:hover {
+  background-color: #555;
+}
+
+

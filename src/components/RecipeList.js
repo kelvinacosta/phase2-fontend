@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import "../RecipeListcss.css"
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([]);
@@ -11,14 +12,14 @@ function RecipeList() {
   }, []);
 
   const recipeItems = recipes.map(recipe => (
-    <li key={recipe.id}>
-      <a href={`/recipes/${recipe.id}`}>{recipe.title}</a>
+    <li className="recipe-list-item" key={recipe.id}>
+      <a className="recipe-list-link" href={`/recipes/${recipe.id}`}>{recipe.title}</a>
     </li>
   ));
 
   return (
-    <div>
-      <h2>Recipes</h2>
+    <div className="recipe-list-container">
+      <h2 className="recipe-list-title">Recipes</h2>
       {recipes.length > 0 ? (
         <ul>{recipeItems}</ul>
       ) : (
