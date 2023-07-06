@@ -21,9 +21,12 @@ function RecipeDetails() {
 
   const { title, ingredients, instructions, image } = recipe;
 
-  const mapIngredients = ingredients.map((ingredient, index) => (
-    <li key={index}>{ingredient}</li>
-  ));
+  let mapIngredients = null;
+  if (Array.isArray(ingredients)) {
+    mapIngredients = ingredients.map((ingredient, index) => (
+      <li key={index}>{ingredient}</li>
+    ));
+  }
 
   return (
     <div className="recipe-details">

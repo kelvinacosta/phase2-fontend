@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../form.css';
 
 function RecipeForm() {
   const [title, setTitle] = useState("");
@@ -15,7 +16,7 @@ function RecipeForm() {
       instructions,
       image
     };
-    //console.log(title)
+
     fetch("https://backend-phase-2-project-2ll9.onrender.com/recipes", {
       method: "POST",
       headers: {
@@ -37,47 +38,58 @@ function RecipeForm() {
   };
 
   return (
-    <div>
-      <h2>Add new Recipe</h2>
+    <div className="recipe-form-container">
+      <h2 className="recipe-form-title">Add New Recipe</h2>
       <form onSubmit={handleSubmit}>
-        <label>
+        <label className="recipe-form-label">
           Title:
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            className="recipe-form-input"
           />
         </label>
-        <label>
+        <label className="recipe-form-label">
           Ingredients:
           <input
             type="text"
             value={ingredients}
             onChange={(e) => setIngredients(e.target.value)}
+            className="recipe-form-input"
           />
         </label>
-        <label>
+        <label className="recipe-form-label">
           Image URL:
           <input
             type="text"
             value={image}
             onChange={(e) => setImage(e.target.value)}
+            className="recipe-form-input"
           />
         </label>
-        <label>
+        <label className="recipe-form-label">
           Instructions:
           <textarea
             value={instructions}
             onChange={(e) => setInstructions(e.target.value)}
+            className="recipe-form-textarea"
           />
         </label>
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="recipe-form-submit"
+          disabled={!title || !ingredients || !instructions || !image}
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
 }
 
 export default RecipeForm;
+
 
 
 
