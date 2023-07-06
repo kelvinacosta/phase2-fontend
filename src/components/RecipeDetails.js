@@ -30,13 +30,22 @@ function RecipeDetails() {
 
   return (
     <div className="recipe-details">
-      <h2>{title}</h2>
+    <h2>{title}</h2>
+    <div className="image-container">
       <img src={image} alt={title} />
-      <ul>{mapIngredients}</ul>
-      <h3>Instructions</h3>
-      <p>{instructions}</p>
     </div>
-  );
+    <div className="info">
+      <div className="ingredients">
+        <h3>Ingredients</h3>
+        <ul>{mapIngredients}</ul>
+      </div>
+      <div className="instructions">
+        <h3>Instructions</h3>
+        <p>{instructions}</p>
+      </div>
+    </div>
+  </div>
+);
 }
 
 export default RecipeDetails;
