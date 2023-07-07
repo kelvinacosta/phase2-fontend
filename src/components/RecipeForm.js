@@ -10,13 +10,14 @@ function RecipeForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    //Create a recipe Data to store new values
     const recipeData = {
       title,
       ingredients,
       instructions,
       image
     };
-
+    //Fetching to Post new data
     fetch("https://backend-phase-2-project-2ll9.onrender.com/recipes", {
       method: "POST",
       headers: {
