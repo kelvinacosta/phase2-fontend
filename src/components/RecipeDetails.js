@@ -21,6 +21,8 @@ function RecipeDetails() {
 
   const { title, ingredients, instructions, image } = recipe;
 
+
+  //Create a map to pass the ingredients list from the file
   let mapIngredients = null;
   if (Array.isArray(ingredients)) {
     mapIngredients = ingredients.map((ingredient, index) => (
