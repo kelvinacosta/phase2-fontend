@@ -6,7 +6,7 @@ function Home() {
     <div className="home-container">
       <div className="home-content">
         <h1 className="home-title">Welcome to The Ecuadorian Recipe Form</h1>
-        <p className="home-subtitle">Discover and share delicious Ecuadorian recipes!</p>
+        <p className="home-subtitle">Discover and share delicious Ecuadorian recipes!!</p>
       </div>
     </div>
   );
