@@ -4,6 +4,8 @@ import '../NaBarcss.css';
 
 function NavBar() {
   return (
+    
+    //Create a nav to store Home,recipe and newRecipe link for the app
     <nav className="navbar">
       <ul>
         <li>
