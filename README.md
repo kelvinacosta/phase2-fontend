@@ -78,3 +78,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 This is where you can find the backend of the project
 
 https://github.com/kelvinacosta/backend-phase-2-project
+
+#Instructions 
+This is a single page aplication where you can check and store recipes from Ecuador where I am from.
+This application has a form where you click on new Recipe and you can Add more Ecuadorian recipes. A submit button to store the information the the recipes section.
+Also there is a recipe router where you can see all the recipes stored from the backend.
